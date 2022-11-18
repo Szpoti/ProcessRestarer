@@ -15,7 +15,10 @@ if(args.DefaultIfEmpty() is null)
 var startInfo = new ProcessStartInfo
 {
     FileName = args[0],
-    Arguments = arguments
+    Arguments = arguments,
+    UseShellExecute = true,
+    CreateNoWindow = false,
+    WindowStyle = ProcessWindowStyle.Normal,
 };
 
 var process = Process.Start(startInfo);
