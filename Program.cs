@@ -20,6 +20,7 @@ var startInfo = new ProcessStartInfo
     CreateNoWindow = false,
     WindowStyle = ProcessWindowStyle.Normal,
 };
+Console.WriteLine($"Starting {startInfo.FileName} with arguments: {arguments}");
 
 var process = Process.Start(startInfo);
 Thread.Sleep(5000);
